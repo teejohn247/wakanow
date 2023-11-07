@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-To run the backend 
+To run the backend Navigate to `https://github.com/teejohn247/Assessment-bk`. run `yarn install` then `yarn start` to run the backend
 
 ## Code scaffolding
 
