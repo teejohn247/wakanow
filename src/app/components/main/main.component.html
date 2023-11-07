@@ -1,0 +1,52 @@
+<div class="main-hdr flex-std">
+    <div class="project">
+        <div class="name">{{pageTitle}}</div>
+        <div class="progress flex-std">
+            <span>{{totalAvg}}%</span>
+            <!-- <mat-progress-bar value="{{totalAvg}}"></mat-progress-bar> -->
+        </div>
+    </div>
+
+    <!-- <div class="actions flex-std">
+        <div class="invite flex-std">
+            <span [ngStyle]="{'color':'#aaa', 'font-size':'25px'}" class="material-icons-round">add</span>
+            <div class="text">Invite</div>
+        </div>
+        <div class="multiple">
+            <div class="img-hld">
+                <img src="../../../assets/img/avatar2.png" />
+                <img src="../../../assets/img/avatar3.png" />
+                <img src="../../../assets/img/avatar5.png" />
+                <img src="../../../assets/img/avatar7.png" />
+            </div>
+        </div>
+    </div> -->
+</div>
+
+
+<div class="task-container">
+
+    <div class="search">
+        <span [ngStyle]="{'color':'#aaa', 'font-size':'25px'}" class="material-icons-round">search</span>
+    </div>
+
+    <div class="rsc-wrap">
+
+        <div class="rsc-hld flex-std" *ngFor="let member of staff">
+            <div class="col flex-std">
+                <div class="image">
+                    <img src={{member.img}} />
+                </div>
+                <div class="details">
+                    <div class="name">{{member.name}}</div>
+                    <div class="role">{{member.role}}</div>
+                </div>
+            </div>
+            <div class="col">
+                <span [ngStyle]="{'color':'#aaa', 'font-size':'18px'}" class="material-icons-round">more_vert</span>
+            </div>
+
+        </div>
+
+    </div>
+</div>

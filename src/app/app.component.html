@@ -1,0 +1,24 @@
+
+<div class="content">
+  <div class="left-cont" [ngClass]="menuStat ? 'half' : 'full' " *ngIf="showHeader">
+    <app-menu (menuStatus)="getStatus($event)" ></app-menu>
+  </div>
+
+  <div class="right-cont" [ngClass]="menuStat ? 'half' : 'full' ">
+
+    <div class="header"  *ngIf="showHeader">
+      <app-header></app-header>
+    </div>
+
+    <div class="main">
+      <!-- <app-main></app-main> -->
+
+
+      <!-- <app-energy-chart></app-energy-chart> -->
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</div>
+

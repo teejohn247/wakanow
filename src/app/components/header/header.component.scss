@@ -1,0 +1,57 @@
+@import "../../../assets/css/color.scss";
+@import "../../../assets/css/fonts.scss";
+@import "../../../assets/css/global.scss";
+
+
+
+.container {
+    height: 100%;
+    padding: 0 7% 0 5%;
+
+    .left {
+        gap: 12px;
+
+        .main-title {
+            font-size: 15px;
+            font-family: 'SGSB';
+            color: $logo-color;
+        }
+
+        .minor-title {
+            font-size: 14px;
+            font-family: 'SGM';
+            color: $light-icon;
+        }
+    }
+
+    .right {
+        gap: 20%;
+        margin-left: auto;
+
+        .notify-icons {
+            gap: 15px;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 1px;
+                height: 4vh;
+                position: absolute;
+                background-color: #eaeaea;
+                transform: translateY(-50%);
+                right: -28%;
+                top: 50%;
+            }
+        }
+
+        .identity {
+            gap: 10px;
+
+            .name {
+                font-size: 14px;
+                font-family: 'SGB';
+                color: $logo-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="menu-wrap" [ngClass]="status ? 'half' : 'full' ">
+    <div class="menu-trigger flex-std">
+        <div class="col flex-std">
+            <span [ngStyle]="{'font-size':'22px'}" class="material-icons-round">layers</span>
+            <div class="text">Test</div>
+        </div>
+        <div class="col" (click)="collapse()">
+            <span [ngClass]="status ? 'half' : 'full' " class="material-icons-round">start</span>
+        </div>
+    </div>
+
+    <div class="menu-items">
+
+        <div class="item-row flex-std" [class.active]="val === 'Projects'">
+            <a href="/" (click)="passTitle('Projects')">
+                <span class="material-icons-round">folder</span>
+                <span>User</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="new-task-hld flex-std">
+        <div class="new">Add User</div>
+        <span [ngStyle]="{'color':'#F58220', 'font-size':'38px'}" class="material-icons-round">add_circle</span>
+    </div>
+
+</div>

@@ -1,0 +1,27 @@
+<main class="box" >
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="inputBox">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="type your username" formControlName="email" required/>
+      <!-- <mat-error *ngIf="isFieldInvalid('email')">
+        Please enter your email
+      </mat-error> -->
+    </div>
+    <div class="inputBox">
+      <label for="userPassword">Password</label>
+      <input type="password" name="userPassword" id="userPassword" formControlName="password" placeholder="type your password"
+             required/>
+             <!-- <mat-error *ngIf="isFieldInvalid('password')">
+              Please enter your password
+            </mat-error> -->
+    </div>
+    <div>
+      <button type="submit" name="" style="float: left;">Submit</button>
+      <a class="button" href="/register" style="float: left;">Register</a>
+
+    </div>
+  </form>
+</main>
+<footer>
+</footer>

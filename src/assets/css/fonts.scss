@@ -1,0 +1,36 @@
+
+@font-face {
+	font-family: 'SGL';
+	src: url('../fonts/SpaceGrotesk-Light.ttf');
+	src: url(//:) format('no404'), url('../fonts/SpaceGrotesk-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SGR';
+	src: url('../fonts/SpaceGrotesk-Regular.ttf');
+	src: url(//:) format('no404'), url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SGM';
+	src: url('../fonts/SpaceGrotesk-Medium.ttf');
+	src: url(//:) format('no404'), url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SGSB';
+	src: url('../fonts/SpaceGrotesk-SemiBold.ttf');
+	src: url(//:) format('no404'), url('../fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SGB';
+	src: url('../fonts/SpaceGrotesk-Bold.ttf');
+	src: url(//:) format('no404'), url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

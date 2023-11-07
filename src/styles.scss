@@ -1,0 +1,445 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "/src/assets/css/color.scss";
+@import "/src/assets/css/fonts.scss";
+@import "/src/assets/css/global.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.fc .fc-toolbar-title {
+    font-family: 'SGB';
+    font-size: 14px !important;
+    color: $logo-color !important;
+    margin-right: 10px !important;
+}
+.fc-col-header-cell-cushion,
+.fc-theme-standard td, .fc-theme-standard th {
+    font-family: 'SGM';
+    font-size: 12px !important;
+    color: $light-icon !important;
+}
+
+.fc .fc-button-primary {
+    padding: 4px 2px !important;
+    color: $logo-color !important;
+    font-size: 12px !important;
+    font-family: 'SGM' !important;
+    text-transform: capitalize !important;
+    background-color: #fff !important;
+}
+
+.fc .fc-button-primary span {
+    color: $light-icon !important;
+    font-size: 15px !important;
+}
+
+.fc-direction-ltr .fc-button-group>.fc-button:first-child {
+    padding: 7px 30px 7px 20px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 20px !important;
+}
+
+.fc-direction-ltr .fc-button-group>.fc-button:not(:first-child) {
+    display: none !important;
+}
+
+.fc-toolbar-chunk > div {
+    display: flex !important;
+    align-items: center;
+}
+
+.fc .fc-button:not(:disabled) {
+    border: none !important;
+}
+
+.fc-day-today .fc-scrollgrid-sync-inner {
+    padding: 0 !important;
+    position: relative !important;
+
+    &::before {
+        content: '';
+        width: 2px;
+        height: 50vh;
+        transform: translateX(-50%);
+        background-color: $primary-color;
+        position: absolute;
+        left: 50%;
+        top: 2vh;
+    }
+
+    &::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 2vh;
+    }
+}
+
+.fc-day-today .fc-scrollgrid-sync-inner a  {
+    width: 100%;
+    color: #fff !important;
+    border-radius: 5px;
+    background-color: $primary-color !important;
+} 
+
+.fc-event-main {
+    height: 2.5vh !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.fc-daygrid-event {
+    padding: 1px !important;
+    border-radius: 15px !important;
+    margin: 10px 0 !important;
+}
+
+.fc-daygrid-block-event .fc-event-time, .fc-daygrid-block-event .fc-event-title {
+    padding: 1px 0 1px 65px !important;
+}
+
+
+/* SPECIFIC TASK PROGRESS PERCENTAGES */
+
+.p10 {
+    position: relative;
+
+    &:before {
+        content: '10%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(245,115,13);
+        position: absolute;
+        color: #fff;
+        width: 10%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p15 {
+    position: relative;
+
+    &:before {
+        content: '15%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(36,163,178);
+        position: absolute;
+        color: #fff;
+        width: 15%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p20 {
+    position: relative;
+
+    &:before {
+        content: '20%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,36,111);
+        position: absolute;
+        color: #fff;
+        width: 20%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p25 {
+    position: relative;
+
+    &:before {
+        content: '25%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,103,178);
+        position: absolute;
+        color: #fff;
+        width: 25%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p30 {
+    position: relative;
+
+    &:before {
+        content: '30%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(134,166,181);
+        position: absolute;
+        color: #fff;
+        width: 30%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p35 {
+    position: relative;
+
+    &:before {
+        content: '35%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(245,115,13);
+        position: absolute;
+        color: #fff;
+        width: 35%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p40 {
+    position: relative;
+
+    &:before {
+        content: '40%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(36,163,178);
+        position: absolute;
+        color: #fff;
+        width: 40%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p45 {
+    position: relative;
+
+    &:before {
+        content: '45%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,36,111);
+        position: absolute;
+        color: #fff;
+        width: 45%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p50 {
+    position: relative;
+
+    &:before {
+        content: '50%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,103,178);
+        position: absolute;
+        color: #fff;
+        width: 50%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p55 {
+    position: relative;
+
+    &:before {
+        content: '55%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(134,166,181);
+        position: absolute;
+        color: #fff;
+        width: 55%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p60 {
+    position: relative;
+
+    &:before {
+        content: '60%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(245,115,13);
+        position: absolute;
+        color: #fff;
+        width: 60%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p65 {
+    position: relative;
+
+    &:before {
+        content: '65%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(36,163,178);
+        position: absolute;
+        color: #fff;
+        width: 65%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p70 {
+    position: relative;
+
+    &:before {
+        content: '70%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,36,111);
+        position: absolute;
+        color: #fff;
+        width: 70%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p75 {
+    position: relative;
+
+    &:before {
+        content: '75%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,103,178);
+        position: absolute;
+        color: #fff;
+        width: 75%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p80 {
+    position: relative;
+
+    &:before {
+        content: '80%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(134,166,181);
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p85 {
+    position: relative;
+
+    &:before {
+        content: '85%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(245,115,13);
+        position: absolute;
+        color: #fff;
+        width: 85%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p90 {
+    position: relative;
+
+    &:before {
+        content: '90%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(36,163,178);
+        position: absolute;
+        color: #fff;
+        width: 90%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p95 {
+    position: relative;
+
+    &:before {
+        content: '95%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,36,111);
+        position: absolute;
+        color: #fff;
+        width: 95%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+.p100 {
+    position: relative;
+
+    &:before {
+        content: '100%';
+        border-radius: 15px;
+        text-align: left;
+        padding: 4px 20px 0;
+        background-color: rgb(209,103,178);
+        position: absolute;
+        color: #fff;
+        width: 100%;
+        bottom: 0;
+        top: 0;
+    }
+}
+
