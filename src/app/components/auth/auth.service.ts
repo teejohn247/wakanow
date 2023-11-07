@@ -31,6 +31,8 @@ export class AuthService {
         console.log({res})
         this._isLoggedin$.next(true);
         sessionStorage.setItem(this.TOKEN_NAME, res.token);
+        sessionStorage.setItem('userId', res.data._id);
+
         sessionStorage.setItem('loggedInUser', JSON.stringify(res));
 
       })

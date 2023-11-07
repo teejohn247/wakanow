@@ -151,6 +151,10 @@ export class AssetsTableComponent implements OnInit {
     });
   }
 
+  getUserId(): string | null {
+    return sessionStorage.getItem('userId');
+  }
+
 
    deleteUser(info: any) {
     console.log(info);
