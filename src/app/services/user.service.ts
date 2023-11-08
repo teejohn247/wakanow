@@ -16,7 +16,7 @@ export class UserService {
     this.dataSubject.next(data);
   }
 
-  private path = `http://localhost:2000/api/v1`;
+  private path = `https://xp-backup-d9e0a88b3530.herokuapp.com/api/v1`;
   //private token = `${environment.token}`;
 
   headerParams = {

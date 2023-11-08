@@ -7,7 +7,7 @@ import { User } from './user';
 @Injectable()
 export class AuthService {
   private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  private path = `http://localhost:2000/api/v1`;
+  private path = `https://xp-backup-d9e0a88b3530.herokuapp.com/api/v1`;
   private _isLoggedin$ = new BehaviorSubject<boolean>(false);
   private readonly TOKEN_NAME = 'user_auth';
   public isLoggedIn = this._isLoggedin$.asObservable();
