@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/core';
+// import { CalendarOptions } from '@fullcalendar/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { Subscription } from 'rxjs';
 import { TasksAssignmentService } from 'src/app/services/tasks-assignment.service';
@@ -14,7 +14,7 @@ import { TasksAssignmentService } from 'src/app/services/tasks-assignment.servic
 export class MainComponent implements OnInit {
 
   totalAvg: number = 0;
-  calendarOptions: CalendarOptions | undefined;
+  // calendarOptions: CalendarOptions | undefined;
   eventDetails: any[] = [];
   pageTitle: string = "Dashboard";
   private titleSub: Subscription;
@@ -29,40 +29,40 @@ export class MainComponent implements OnInit {
     })
 
 
-    this.calendarOptions = {
-      headerToolbar: {
-        left: 'title,prev,next',
-        center: '',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-      },
-      views: {
-        dayGrid: { // name of view
-          titleFormat: { month: 'long', year: 'numeric' },
-          dayHeaderFormat: { weekday: 'narrow', day: 'numeric'}
-          // other view-specific options here
-        },
-      },
-      contentHeight: 480,
-      visibleRange: function(currentDate){
-        let startDate = new Date(currentDate.valueOf());
-        let endDate = new Date(currentDate.valueOf());
+    // this.calendarOptions = {
+    //   headerToolbar: {
+    //     left: 'title,prev,next',
+    //     center: '',
+    //     right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    //   },
+    //   views: {
+    //     dayGrid: { // name of view
+    //       titleFormat: { month: 'long', year: 'numeric' },
+    //       dayHeaderFormat: { weekday: 'narrow', day: 'numeric'}
+    //       // other view-specific options here
+    //     },
+    //   },
+    //   contentHeight: 480,
+    //   visibleRange: function(currentDate){
+    //     let startDate = new Date(currentDate.valueOf());
+    //     let endDate = new Date(currentDate.valueOf());
 
-        startDate.setDate(startDate.getDate()-9);
-        endDate.setDate(endDate.getDate()+7);
+    //     startDate.setDate(startDate.getDate()-9);
+    //     endDate.setDate(endDate.getDate()+7);
 
-        return {
-          start: startDate,
-          end: endDate
-        };
-      },
-      initialView: 'dayGrid',
-      events: [...this.eventDetails],
-      weekends: true,
-      editable: true,
-      selectable: true,
-      selectMirror: true,
-      dayMaxEvents: true,
-    };
+    //     return {
+    //       start: startDate,
+    //       end: endDate
+    //     };
+    //   },
+    //   initialView: 'dayGrid',
+    //   events: [...this.eventDetails],
+    //   weekends: true,
+    //   editable: true,
+    //   selectable: true,
+    //   selectMirror: true,
+    //   dayMaxEvents: true,
+    // };
 
   }
 
@@ -76,46 +76,46 @@ export class MainComponent implements OnInit {
   }
 
   getEvents() {
-    this.taskService.getTasks().subscribe({
-      next: (task) => {
-        this.eventDetails = task;
+    // this.taskService.getTasks().subscribe({
+      // next: (task) => {
+      //   this.eventDetails = task;
 
-        this.calendarOptions = {
-          headerToolbar: {
-            left: 'title,prev,next',
-            center: '',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-          },
-          views: {
-            dayGrid: { // name of view
-              titleFormat: { month: 'long', year: 'numeric' },
-              dayHeaderFormat: { weekday: 'narrow', day: 'numeric'}
-              // other view-specific options here
-            },
-          },
-          contentHeight: 480,
-          visibleRange: function(currentDate){
-            let startDate = new Date(currentDate.valueOf());
-            let endDate = new Date(currentDate.valueOf());
+      //   this.calendarOptions = {
+      //     headerToolbar: {
+      //       left: 'title,prev,next',
+      //       center: '',
+      //       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      //     },
+      //     views: {
+      //       dayGrid: { // name of view
+      //         titleFormat: { month: 'long', year: 'numeric' },
+      //         dayHeaderFormat: { weekday: 'narrow', day: 'numeric'}
+      //         // other view-specific options here
+      //       },
+      //     },
+      //     contentHeight: 480,
+      //     visibleRange: function(currentDate){
+      //       let startDate = new Date(currentDate.valueOf());
+      //       let endDate = new Date(currentDate.valueOf());
 
-            startDate.setDate(startDate.getDate()-9);
-            endDate.setDate(endDate.getDate()+7);
+      //       startDate.setDate(startDate.getDate()-9);
+      //       endDate.setDate(endDate.getDate()+7);
 
-            return {
-              start: startDate,
-              end: endDate
-            };
-          },
-          initialView: 'dayGrid',
-          events: [...this.eventDetails],
-          weekends: true,
-          editable: true,
-          selectable: true,
-          selectMirror: true,
-          dayMaxEvents: true,
-        };
-      }
-    })
+      //       return {
+      //         start: startDate,
+      //         end: endDate
+      //       };
+      //     },
+      //     initialView: 'dayGrid',
+      //     events: [...this.eventDetails],
+      //     weekends: true,
+      //     editable: true,
+      //     selectable: true,
+      //     selectMirror: true,
+      //     dayMaxEvents: true,
+      //   };
+    //   }
+    // })
   }
 
   calculateOverallPercent() {
