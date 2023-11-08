@@ -22,13 +22,9 @@ export class AuthService {
   ) {this._isLoggedin$.next(!!this.token)}
 
 
-
-
   public login(loginDetails: any): Observable<any> {
-    //console.log(loginDetails);
     return this.http.post<any>(`${this.path}/login`, loginDetails).pipe(
       tap((res: any) => {
-        console.log({res})
         this._isLoggedin$.next(true);
         sessionStorage.setItem(this.TOKEN_NAME, res.token);
         sessionStorage.setItem('userId', res.data._id);

@@ -163,9 +163,6 @@ export class EditAssetComponent implements OnInit {
   async onSubmit() {
 
     this.submitted = true;
-
-    console.log('here', this.editUserForm)
-    console.log('here', this.userId)
     if(this.editUserForm.valid && this.editUserForm?.value) {
 
         this.auth.editUser(this.userId, this.editUserForm.value).subscribe({

@@ -5,7 +5,7 @@ import { AuthService } from '../auth/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: [ './login.component.css' ]
+  styleUrls: [ './login.component.scss' ]
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
@@ -19,26 +19,10 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.loginForm = this.fb.group({
-    //   email: ['', Validators.required],
-    //   password: ['', Validators.required]
-    // });
+
   }
 
-  // isFieldInvalid(field: string) {
-  //   return (
-  //     this.form &&
-  //     ((!this.form?.get(field).valid && this.form.get(field).touched) ||
-  //     (this.form.get(field).untouched && this.formSubmitAttempt))
-  //   );
-  // }
 
-  // onSubmit() {
-  //   if (this.loginForm.valid) {
-  //     this.authService.login(this.loginForm.value);
-  //   }
-  //   this.formSubmitAttempt = true;
-  // }
 
   showPassword: boolean = false;
   submitted: boolean = false;
@@ -53,7 +37,6 @@ export class LoginComponent implements OnInit {
 
     this.submitted = true;
 
-    console.log('here', this.loginForm.valid)
     if(this.loginForm.valid) {
       if(this.existingUser) {
         this.auth.login(this.loginForm.value).subscribe({
@@ -68,9 +51,10 @@ export class LoginComponent implements OnInit {
               }
             }
           },
-          error: (err: { error: { error: any; }; }) => {
+          error: (err: { error: { msg: any; }; }) => {
             console.log(err)
-            // this.notify.showError(err.error.error);
+            alert(err.error?.msg)
+
           }
         })
       }

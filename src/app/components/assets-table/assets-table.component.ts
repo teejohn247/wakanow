@@ -157,7 +157,6 @@ export class AssetsTableComponent implements OnInit {
 
 
    deleteUser(info: any) {
-    console.log(info);
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: {
         title: 'Confirm Action',
@@ -166,11 +165,8 @@ export class AssetsTableComponent implements OnInit {
 
       dialogRef.afterClosed().subscribe(async (result) => {
         if (result === true) {
-          // User confirmed the action; perform the action here
           await this.userService.deleteUser(info._id).toPromise();
           this.userList =  await this.userService.getUsers().toPromise();
-
-          console.log('ll', this.userList)
           this.userService.setData(this.userList['data']);
         }
       });
@@ -179,7 +175,6 @@ export class AssetsTableComponent implements OnInit {
   getPageData = async () => {
     this.userList = await this.userService.getUsers().toPromise();
 
-    console.log(this.userList);
     this.dataSource = new MatTableDataSource(this.userList['data']);
     this.dataSource.sort = this.sort;
   }

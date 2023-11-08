@@ -88,7 +88,6 @@ export class TasksAssignmentService {
   todaysDate() {
     let date = new Date();
     let dateFormat = date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
-    console.log(dateFormat);
     return dateFormat;
   }
 
@@ -111,7 +110,6 @@ export class TasksAssignmentService {
       className: this.progress[classTemp],
     }
 
-    console.log(eventData);
     return eventData;
   }
 
@@ -140,21 +138,17 @@ export class TasksAssignmentService {
       this.eventDetails = this.generateInitialTasks();
     }
     else {
-      console.log(this.initialProgress);
       let progressInc = this.initialProgress.map(item => {
         if(item === 100) {
           item = (this.getRandom(0, 4))*5+10;
-          console.log(item)
           return item
         }
         else if((item + (this.getRandom(0, 4))*5+10) > 100) {
           item = 100;
-          console.log(item)
           return item
         }
         else {
           item += (this.getRandom(0, 4))*5+10;
-          console.log(item)
           return item
         }
       });
@@ -162,8 +156,7 @@ export class TasksAssignmentService {
       this.initialProgress = progressInc;
 
       let percentProgress = progressInc.map(item => {
-        //item.toString()
-        //`"p"${item}.to`
+
         return "p"+String(item);
       })
 

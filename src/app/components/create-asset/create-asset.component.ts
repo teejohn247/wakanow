@@ -150,12 +150,10 @@ export class CreateAssetComponent implements OnInit {
 
     this.submitted = true;
 
-    console.log('here', this.addUserForm)
-    console.log('here', this.addUserForm.valid)
+
     if(this.addUserForm.valid) {
         this.auth.addUser(this.addUserForm.value).subscribe({
           next: async (res: { status: number; data: { firstName: string; lastName: string; email: string; password: string }; }) => {
-            console.log(res);
             if(res.status == 200) {
               if(res.data) {
                 this.userList =  await this.auth.getUsers().toPromise();
@@ -169,9 +167,8 @@ export class CreateAssetComponent implements OnInit {
               }
             }
           },
-          error: (err: { error: { error: any; }; }) => {
-            console.log(err)
-            alert('Error adding User')
+          error: (err: { error: { msg: any; }; }) => {
+            alert(err.error?.msg)
 
             // this.notify.showError(err.error.error);
           }

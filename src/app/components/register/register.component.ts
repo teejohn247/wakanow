@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: [ './register.component.css' ]
+  styleUrls: [ './register.component.scss' ]
 })
 export class RegisterComponent implements OnInit {
   submitted: boolean = false;
@@ -36,7 +36,6 @@ export class RegisterComponent implements OnInit {
     if(this.registerForm.valid) {
         this.auth.register(this.registerForm.value).subscribe({
           next: (res: { status: number; data: { firstName: string; lastName: string; email: string; password: string }; }) => {
-            console.log(res);
             if(res.status == 200) {
               if(res.data) {
                 this.route.navigate(['/login'])
@@ -46,8 +45,8 @@ export class RegisterComponent implements OnInit {
               }
             }
           },
-          error: (err: { error: { error: any; }; }) => {
-            console.log(err)
+          error: (err: { error: { msg: any; }; }) => {
+            alert(err.error?.msg)
             // this.notify.showError(err.error.error);
           }
         })
